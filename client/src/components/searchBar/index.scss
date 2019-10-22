@@ -1,0 +1,95 @@
+.search-page {
+	height: 100%;
+}
+.search-bar{
+	position:fixed;
+	top:0;
+	height: 92rpx;
+	width: 100%;
+	background-color: #fff;
+	padding: 10rpx 30rpx 20rpx;
+	box-sizing: border-box;
+	border-bottom: 2rpx solid #f2f2f2;
+	z-index:100;
+}
+.suggest-wrapper {
+	position: fixed;
+	left: 0;
+	top: 92rpx;
+	width: 100%;
+	height: 100%;
+	padding: 0 30rpx;
+	background-color: #fff;
+	z-index: 5;
+	box-sizing: border-box;
+}
+.suggest-wrapper view{
+	height: 88rpx;
+	line-height: 88rpx;
+	font-size:28rpx;
+	color:#333;
+	text-align:left;
+	border-bottom: 2rpx solid #f2f2f2;
+}
+.search-contain{
+	width: 100%;
+	height: 60rpx;
+	border-radius: 4rpx;
+	position: relative;
+	overflow: hidden;
+}
+.search-contain .search-txt{
+	margin: 0 50rpx;
+	background-color: #f3f5f5;
+	box-sizing: border-box;
+}
+.search-contain input{
+	width: calc(100% - 136rpx);
+	height: 60rpx;
+	border: none;
+	font-size:28rpx;
+	color:#333;
+	overflow: hidden;
+	padding-left: 80rpx;
+	border-radius: 4rpx;
+}
+.search-contain .search-icon{
+	position: absolute;
+	left: 82rpx;
+	top: 50%;
+	transform: translate(0,-50%);
+	height: 36rpx;
+	width: 36rpx;
+	z-index: 10;
+	background:url(https://imgcms.yit.com/cmsres/20170511/1e35a3b9-f9bb-4df2-9e85-3caf77aab768.png) left top no-repeat;
+	background-size: 36rpx;
+}
+.search-contain .cross-icon{
+	width: 50rpx;
+	height: 50rpx;
+	padding: 12rpx;
+	box-sizing: border-box;
+	position: absolute;
+	right: 90rpx;
+	top: 50%;
+	transform: translate(0,-50%);
+	background:url(https://asset.yit.com/xcx/icon/icon_clear.png) 12rpx 12rpx no-repeat;
+	background-size: 26rpx;
+	border-radius:100%;
+	z-index: 10;
+}
+.search-contain .concel{
+	position: absolute;
+	right: 0;
+	top: 0;
+	font-size:28rpx;
+	color:#333;
+	width:86rpx;
+	background:#fff;
+	height:60rpx;
+	line-height:60rpx;
+	text-align: center;
+}
+.search-contain .placeholder{
+	color:#999;
+}

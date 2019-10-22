@@ -1,0 +1,40 @@
+.article-list {
+  padding: 30rpx 50rpx;
+  .article-item {
+    font-size: 36rpx;
+    font-family: PingFangSC-Medium;
+    color: #333;
+    margin-bottom: 40rpx;
+    .icon {
+      margin-right: 20rpx;
+      font-size: 26rpx;
+      color: #fff;
+      opacity: 0.95;
+      padding: 0 5rpx;
+    }
+    .icon-normal {
+      background-color: #ff1e00;
+    }
+    .icon-react {
+      background-color: #5f0ace;
+    }
+    .icon-we-mp {
+      background-color: #0ace3b;
+    }
+    .icon-javascript {
+      background-color: #f76f00;
+    }
+    .icon-typescript {
+      background-color: #409cf1;
+    }
+    .icon-nodejs {
+      background-color: #0ace93;
+    }
+    .icon-webpack {
+      background-color: #0d0ace;
+    }
+    .icon-electron {
+      background-color: #4078c0;
+    }
+  }
+}
