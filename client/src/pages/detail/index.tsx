@@ -23,7 +23,7 @@ export default class Index extends Component {
   componentDidMount() {
     console.log(this.$router.params.id, '--');
     this.setState({
-      activeId: this.$router.params.id
+      activeId: this.$router.params.id || this.$router.params.scene
     })
   }
 

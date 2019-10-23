@@ -1,6 +1,6 @@
 import Taro, { Component, Config } from '@tarojs/taro'
 // Text
-import { View, Button } from '@tarojs/components'
+import { View, Button, Image } from '@tarojs/components'
 import './index.scss'
 
 // import Login from '../../components/login/index'
@@ -33,6 +33,34 @@ export default class Index extends Component {
     phone: '未设置',
     sex: '未设置',
     habit: '未设置',
+    qrCodeImage: ''
+  }
+
+  getQrCode = (e) => {
+    console.log(e);
+    //跳转页面，在新页面写获取二维码
+    this.cloudGetQrCode()
+  }
+
+  cloudGetQrCode() {
+    wx.cloud.callFunction({
+      // 云函数名称
+      name: 'test',
+      // 传给云函数的参数
+      data: {
+        scene: '0',
+        page: 'pages/detail/index',
+      },
+      success: (res) => {
+        console.log(res) // 3
+        const base64 = wx.arrayBufferToBase64(res.result.buffer)
+        console.log(base64);
+        this.setState({
+          qrCodeImage: 'data:image/jpg;base64,'+base64
+        });
+      },
+      fail: console.error
+    });
   }
 
   render() {
@@ -57,6 +85,12 @@ export default class Index extends Component {
             <View className="cell-content">{habit}</View>
           </View>
         </View>
+        <View className="getQrCode" onClick={this.getQrCode}>获取文章的小程序码</View>
+        
+        {
+          this.state.qrCodeImage &&
+          <Image style="width:300rpx;height:300rpx;" src={this.state.qrCodeImage} />
+        }
       </View>
     )
   }

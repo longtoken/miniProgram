@@ -1,6 +1,6 @@
 import Taro, { Component, Config } from '@tarojs/taro'
 // Text
-import { View } from '@tarojs/components'
+import { View, Image } from '@tarojs/components'
 import './index.scss'
 import SearchBar from '../../components/searchBar/index.weapp'
 import ViewList from '../../components/viewList/index.weapp'
@@ -19,21 +19,22 @@ export default class Index extends Component {
     navigationBarTitleText: '首页'
   }
 
-  componentWillMount () { }
+  componentWillMount() { }
 
-  componentDidMount () { }
+  componentDidMount() {
+  }
 
-  componentWillUnmount () { }
+  componentWillUnmount() { }
 
-  componentDidShow () { }
+  componentDidShow() { }
 
-  componentDidHide () { }
-
-  render () {
+  componentDidHide() { }
+  
+  render() {
     return (
       <View className='index'>
         {/* <SearchBar/> */}
-        <ViewList/>
+        <ViewList />
       </View>
     )
   }
